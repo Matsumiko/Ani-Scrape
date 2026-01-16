@@ -1,0 +1,12 @@
+services:
+  otakludesu-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: otakludesu-api
+    restart: unless-stopped
+    ports:
+      - "7501:7501"
+    environment:
+      - NODE_ENV=production
+      - PORT=7501
